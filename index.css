@@ -1,0 +1,21 @@
+@theme {
+  --text-box-trim-both: trim-both;
+  --text-box-trim-start: trim-start;
+  --text-box-trim-end: trim-end;
+}
+
+@utility box-trim-* {
+  text-box-trim: --value(--text-box-trim-*, "none");
+}
+
+@utility box-edge-* {
+  text-box-edge: --value(
+    --text-box-edge-*,
+    "text",
+    "alphabetic",
+    "ideographic",
+    "cap",
+    "ex",
+    [*]
+  );
+}
