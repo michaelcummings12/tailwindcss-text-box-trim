@@ -14,6 +14,10 @@
     "ui"
   ],
   "author": "Michael Cummings (https://www.michaelcummin.gs)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelcummings12/tailwindcss-text-box-trim.git"
+  },
   "files": [
     "index.css",
     "README.md",

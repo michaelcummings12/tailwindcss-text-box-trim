@@ -1,5 +1,9 @@
 # tailwindcss-text-box-trim
 
+[![npm version](https://img.shields.io/npm/v/tailwindcss-text-box-trim.svg)](https://www.npmjs.com/package/tailwindcss-text-box-trim)
+[![GitHub](https://img.shields.io/github/license/michaelcummings12/tailwindcss-text-box-trim)](https://github.com/michaelcummings12/tailwindcss-text-box-trim/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/michaelcummings12/tailwindcss-text-box-trim?style=social)](https://github.com/michaelcummings12/tailwindcss-text-box-trim)
+
 Tailwind CSS v4 utilities for `text-box-trim` and `text-box-edge`.
 
 ## Installation
