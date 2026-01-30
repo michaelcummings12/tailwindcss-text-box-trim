@@ -1,4 +1,4 @@
-# <img src="./assets/logo.svg" width="32" height="32" class="inline" /> tailwindcss-text-box-trim
+# <img src="./assets/logo.svg" width="32" height="32" style="display: inline-block; vertical-align: middle;" /> tailwindcss-text-box-trim
 
 **Perfect typography spacing for Tailwind CSS v4+**
 
@@ -90,7 +90,3 @@ export const twMerge = extendTailwindMerge({
   },
 });
 ```
-
-## Keywords
-
-Tailwind CSS, text-box-trim, leading-trim, cap-height trimming, typography, vertical pacing, web design, CSS spacing, frontend development
