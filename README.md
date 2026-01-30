@@ -1,10 +1,26 @@
-# tailwindcss-text-box-trim
+# <img src="./assets/logo.svg" width="32" height="32" class="inline" /> tailwindcss-text-box-trim
+
+**Perfect typography spacing for Tailwind CSS v4+**
 
 [![npm version](https://img.shields.io/npm/v/tailwindcss-text-box-trim.svg)](https://www.npmjs.com/package/tailwindcss-text-box-trim)
 [![GitHub](https://img.shields.io/github/license/michaelcummings12/tailwindcss-text-box-trim)](https://github.com/michaelcummings12/tailwindcss-text-box-trim/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/michaelcummings12/tailwindcss-text-box-trim?style=social)](https://github.com/michaelcummings12/tailwindcss-text-box-trim)
 
-Tailwind CSS v4 utilities for `text-box-trim` and `text-box-edge`.
+![Before and after comparison of text-box-trim behavior](./assets/example.png)
+
+<sub>**Before:** Standard text with excess space. **After:** Text with _text-box-trim_ applied, removing the excess space for perfect alignment.</sub>
+
+Create pixel-perfect typographical layouts with precise control over the vertical spacing of text 🤩
+
+Eliminate annoying leading whitespace and cap-height alignment issues with standard CSS. This package provides **Tailwind CSS utilities** for the [CSS Text Box Trim](https://developer.mozilla.org/en-US/docs/Web/CSS/text-box-trim) specification.
+
+## Why use this?
+
+Standard web typography often includes "internal leading" (extra space above and below the text glyphs) which makes it difficult to align text containers precisely with images, buttons, or other elements.
+
+`text-box-trim` solves this by cropping that extra space, making your text behave more like a standard box model element.
+
+Use `text-box-trim` along with `text-box-edge` to control which sides of the text box are trimmed and how much space to trim.
 
 ## Installation
 
@@ -16,7 +32,7 @@ npm install tailwindcss-text-box-trim
 
 ## Usage
 
-This package is designed for **Tailwind CSS v4**.
+This package is designed for **Tailwind CSS v4+**.
 
 Import the CSS in your main CSS file (e.g., `global.css`):
 
@@ -35,24 +51,24 @@ Firefox support is [pending](https://bugzilla.mozilla.org/show_bug.cgi?id=181603
 
 ### Utilities
 
-#### `box-trim-*`
+#### _box-trim-\*_
 
-- `box-trim-both`: sets `text-box-trim: trim-both`
-- `box-trim-start`: sets `text-box-trim: trim-start`
-- `box-trim-end`: sets `text-box-trim: trim-end`
-- `box-trim-none`: sets `text-box-trim: none`
+Control which sides of the text box are trimmed.
 
-#### `box-edge-*`
+- `box-trim-both`: Trims space from **both** start (top) and end (bottom).
+- `box-trim-start`: Trims space from the **start** (top) only.
+- `box-trim-end`: Trims space from the **end** (bottom) only.
+- `box-trim-none`: Removes trimming.
 
-- `box-edge-text`: sets `text-box-edge: text`
-- `box-edge-cap`: sets `text-box-edge: cap`
-- `box-edge-ex`: sets `text-box-edge: ex`
-- `box-edge-alphabetic`: sets `text-box-edge: alphabetic`
-- `box-edge-ideographic`: sets `text-box-edge: ideographic`
+#### _box-edge-\*_
 
-### Customization
+Define the reference edge for trimming.
 
-The utilities use theme variables allowing for customization.
+- `box-edge-text`: Trims to the text edge (default).
+- `box-edge-cap`: Trims to the **cap height** (top of capital letters). Perfect for aligning headers.
+- `box-edge-ex`: Trims to the x-height.
+- `box-edge-alphabetic`: Trims to the alphabetic baseline.
+- `box-edge-ideographic`: Trims to the ideographic baseline (CJK).
 
 ### Usage with tailwind-merge
 
@@ -74,3 +90,7 @@ export const twMerge = extendTailwindMerge({
   },
 });
 ```
+
+## Keywords
+
+Tailwind CSS, text-box-trim, leading-trim, cap-height trimming, typography, vertical pacing, web design, CSS spacing, frontend development

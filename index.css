@@ -1,16 +1,16 @@
 @theme {
-  --text-box-trim-both: trim-both;
-  --text-box-trim-start: trim-start;
-  --text-box-trim-end: trim-end;
+  --box-trim-both: trim-both;
+  --box-trim-start: trim-start;
+  --box-trim-end: trim-end;
 }
 
 @utility box-trim-* {
-  text-box-trim: --value(--text-box-trim-*, "none");
+  text-box-trim: --value(--box-trim-*, "none");
 }
 
 @utility box-edge-* {
   text-box-edge: --value(
-    --text-box-edge-*,
+    --box-edge-*,
     "text",
     "alphabetic",
     "ideographic",

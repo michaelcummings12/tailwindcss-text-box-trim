@@ -18,7 +18,7 @@ describe("tailwindcss-text-box-trim", () => {
     });
 
     const css = result.css;
-    expect(css).toContain("text-box-trim: var(--text-box-trim-both)");
+    expect(css).toContain("text-box-trim: var(--box-trim-both)");
   });
 
   it("generates box-edge utilities", async () => {
