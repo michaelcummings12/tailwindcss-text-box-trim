@@ -22,19 +22,33 @@ jobs:
         with:
           node-version: "latest"
           registry-url: "https://registry.npmjs.org"
+      - name: Check latest version
+        id: check
+        run: |
+          VERSION=$(npm pkg get version | tr -d '"')
+          NAME=$(npm pkg get name | tr -d '"')
+          PUBLISHED_VERSION=$(npm view "$NAME@$VERSION" version 2>/dev/null || echo "")
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+          if [ -z "$PUBLISHED_VERSION" ]; then
+            echo "should_publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_publish=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Install dependencies
+        if: steps.check.outputs.should_publish == 'true'
         run: npm ci
-      - name: Get version
-        id: package-version
-        run: echo "version=$(npm pkg get version | tr -d '"')" >> "$GITHUB_OUTPUT"
       - name: Create GitHub Release
+        if: steps.check.outputs.should_publish == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create v${{ steps.package-version.outputs.version }} \
+          gh release create v${{ steps.check.outputs.version }} \
             --generate-notes \
-            --title "v${{ steps.package-version.outputs.version }}"
+            --title "v${{ steps.check.outputs.version }}"
       - name: Publish to NPM
+        if: steps.check.outputs.should_publish == 'true'
         run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

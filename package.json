@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-text-box-trim",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tailwind CSS v4 utilities for text-box-trim and text-box-edge",
   "homepage": "https://github.com/michaelcummings12/tailwindcss-text-box-trim#readme",
   "main": "index.css",
