@@ -2,16 +2,26 @@
   "name": "tailwindcss-text-box-trim",
   "version": "1.0.3",
   "description": "Tailwind CSS v4 utilities for text-box-trim and text-box-edge",
+  "homepage": "https://github.com/michaelcummings12/tailwindcss-text-box-trim#readme",
   "main": "index.css",
   "scripts": {
     "test": "vitest"
   },
   "keywords": [
-    "tailwindcss",
-    "text-box-trim",
-    "text-box-edge",
+    "cap height trimming",
     "css",
-    "ui"
+    "css spacing",
+    "frontend development",
+    "leading trim",
+    "tailwindcss",
+    "text box edge",
+    "text box trim",
+    "text spacing",
+    "typography",
+    "ui",
+    "vertical spacing",
+    "vertical text spacing",
+    "web design"
   ],
   "author": "Michael Cummings (https://www.michaelcummin.gs)",
   "repository": {
