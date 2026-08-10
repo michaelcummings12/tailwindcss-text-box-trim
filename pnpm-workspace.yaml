@@ -1,0 +1,4 @@
+# Postinstall scripts pnpm is allowed to run (pnpm blocks them by default).
+# esbuild fetches its native binary here, which vitest needs to transform tests.
+allowBuilds:
+  esbuild: true

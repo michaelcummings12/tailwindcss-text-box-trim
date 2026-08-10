@@ -18,10 +18,12 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v6
         with:
           node-version: "latest"
           registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
       - name: Check latest version
         id: check
         run: |
@@ -38,7 +40,7 @@ jobs:
           fi
       - name: Install dependencies
         if: steps.check.outputs.should_publish == 'true'
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       - name: Create GitHub Release
         if: steps.check.outputs.should_publish == 'true'
         env:
